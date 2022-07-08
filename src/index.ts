@@ -44,7 +44,7 @@ export default {
     const user = note.user;
     const username = user.host ? `${user.username}@${user.host}` : user.username;
     const replyId = note.id;
-    const text = note.reply ? note.reply.text : note.text;
+    const text = note.reply && note.text?.includes('!reply!') ? note.reply.text : note.text;
     if (!text) {
       console.log('no text');
       return new Response('no text');

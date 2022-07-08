@@ -1,0 +1,10 @@
+name = "mi-sort-bot"
+main = "src/index.ts"
+compatibility_date = "2022-07-01"
+workers_dev = true
+
+# [vars]
+# APIKEY = "misskey apikey"
+# USERID = "bot userid"
+# HOST = "https://misskey.io"
+# SECRET = "webhook secret"

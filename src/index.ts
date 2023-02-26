@@ -1,3 +1,4 @@
+import { runes } from 'runes2';
 import { User, Visibility, WebhookResponse } from './misskey';
 
 export interface Env {
@@ -88,7 +89,7 @@ async function reply({
     return new Response('too long text');
   }
 
-  const sortedText = [..._text].sort().join('').trim();
+  const sortedText = runes(_text).sort().join('').trim();
   const ok = await postNote(host, apikey, {
     text: `@${username}\n${sortedText}`,
     visibility,
